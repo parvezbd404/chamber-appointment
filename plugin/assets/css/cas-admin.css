@@ -1,0 +1,116 @@
+.cas-admin-wrap{max-width:1280px}.cas-card{background:#fff;border:1px solid #c3c4c7;border-radius:8px;margin:16px 0;padding:18px}.cas-stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:18px 0}.cas-stat-card{background:#fff;border:1px solid #dcdcde;border-left:5px solid #2271b1;border-radius:8px;padding:16px}.cas-stat-card span{display:block;color:#646970;font-weight:600;text-transform:uppercase}.cas-stat-card strong{font-size:30px}.cas-filter-bar,.cas-bulk-bar{display:flex;gap:8px;flex-wrap:wrap;background:#fff;border:1px solid #dcdcde;border-radius:8px;margin:14px 0;padding:12px}.cas-two-column{display:grid;grid-template-columns:380px 1fr;gap:18px}.cas-inline-form{display:inline-flex;gap:6px}.cas-status-badge{border-radius:999px;color:#fff;display:inline-block;font-size:11px;font-weight:700;padding:5px 9px;text-transform:uppercase}.cas-status-pending{background:#6c757d}.cas-status-confirmed{background:#2271b1}.cas-status-reconfirmed{background:#00a32a}.cas-status-cancelled{background:#d63638}.cas-status-waiting_list{background:#dba617;color:#1d2327}.cas-status-moved_from_waiting{background:#008a8a}.cas-status-checked_in{background:#8c3fb0}.cas-status-completed{background:#006400}.cas-status-no_show{background:#000}@media(max-width:782px){.cas-two-column{grid-template-columns:1fr}.cas-filter-bar{display:block}}@media print{#adminmenumain,#wpadminbar,#wpfooter,.notice,.cas-filter-bar,.cas-actions{display:none!important}@page{size:A4;margin:12mm}}
+
+
+/* Patch: visible admin labels and better CRUD/action spacing */
+.cas-labelled-form label,
+.cas-inline-label { display:block; font-weight:700; margin:8px 0 4px; color:#1d2327; }
+.cas-inline-label { display:inline-block; margin:0 4px 0 0; }
+.cas-form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+.cas-form-grid p { margin:0 0 8px; }
+.cas-labelled-form input[type="text"], .cas-labelled-form input[type="email"], .cas-labelled-form input[type="number"], .cas-labelled-form input[type="date"], .cas-labelled-form select, .cas-labelled-form textarea { width:100%; max-width:100%; }
+.cas-danger-link { color:#b32d2e !important; }
+.cas-danger-link:hover { color:#8a2424 !important; }
+.row-actions .delete a, .row-actions .trash a { color:#b32d2e; }
+
+
+/* Patch: visible admin labels and better CRUD/action spacing */
+.cas-labelled-form label,
+.cas-inline-label { display:block; font-weight:700; margin:8px 0 4px; color:#1d2327; }
+.cas-inline-label { display:inline-block; margin:0 4px 0 0; }
+.cas-form-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+.cas-form-grid p { margin:0 0 8px; }
+.cas-labelled-form input[type="text"], .cas-labelled-form input[type="email"], .cas-labelled-form input[type="number"], .cas-labelled-form input[type="date"], .cas-labelled-form select, .cas-labelled-form textarea { width:100%; max-width:100%; }
+.cas-danger-link { color:#b32d2e !important; }
+.cas-danger-link:hover { color:#8a2424 !important; }
+.row-actions .delete a, .row-actions .trash a { color:#b32d2e; }
+
+.cas-balance-result{margin-top:8px;padding:8px 10px;border-left:4px solid #72aee6;background:#f6f7f7;max-width:720px;}
+.cas-balance-result.notice-success{border-left-color:#00a32a;background:#f0fff4;}
+.cas-balance-result.notice-error{border-left-color:#d63638;background:#fff5f5;}
+
+/* CAS 1.0.15 portal pages, messages, and slot picker */
+.cas-portal-page-actions{background:#f6f7f7;border:1px solid #dcdcde;border-radius:8px;margin:12px 0;padding:12px}.cas-message-center-grid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:18px}.cas-admin-thread-list{margin:0}.cas-admin-thread-list li{margin:0;border-bottom:1px solid #dcdcde}.cas-admin-thread-list a{display:block;padding:10px 12px;text-decoration:none}.cas-admin-thread-list li.is-active a{background:#eef6ff;border-left:4px solid #2271b1}.cas-admin-thread-list strong,.cas-admin-thread-list span{display:block}.cas-admin-thread-list em{background:#d63638;border-radius:999px;color:#fff;display:inline-block;font-style:normal;margin-top:4px;min-width:20px;padding:2px 7px;text-align:center}.cas-admin-message-thread{background:#f6f7f7;border:1px solid #dcdcde;border-radius:12px;max-height:520px;overflow:auto;padding:14px}.cas-admin-message{display:flex;margin-bottom:10px}.cas-admin-message-patient_to_chamber{justify-content:flex-start}.cas-admin-message-chamber_to_patient{justify-content:flex-end}.cas-admin-message-bubble{background:#fff;border:1px solid #dcdcde;border-radius:14px;max-width:78%;padding:10px 12px}.cas-admin-message-chamber_to_patient .cas-admin-message-bubble{background:#e7f3ff;border-color:#72aee6}.cas-admin-message-bubble p{margin:0 0 6px}.cas-admin-message-bubble small{color:#646970}.cas-reply-form{margin-top:14px}.cas-serial-picker-field{display:flex;gap:6px;align-items:center}.cas-serial-picker-field input{max-width:110px}.cas-slot-modal{background:rgba(0,0,0,.45);bottom:0;left:0;position:fixed;right:0;top:0;z-index:100000}.cas-slot-modal-inner{background:#fff;border-radius:12px;box-shadow:0 20px 80px rgba(0,0,0,.25);left:50%;max-height:88vh;max-width:920px;overflow:auto;padding:22px;position:absolute;top:50%;transform:translate(-50%,-50%);width:calc(100% - 40px)}.cas-slot-modal-close{font-size:32px;position:absolute;right:18px;top:12px;text-decoration:none}.cas-slot-toolbar{align-items:center;background:#f6f7f7;border:1px solid #dcdcde;border-radius:8px;display:flex;gap:10px;margin:12px 0;padding:10px}.cas-slot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}.cas-slot-tile{background:#fff;border:2px solid #c3c4c7;border-radius:10px;cursor:pointer;min-height:92px;padding:10px;text-align:center}.cas-slot-tile strong,.cas-slot-tile span,.cas-slot-tile em{display:block}.cas-slot-tile strong{font-size:24px}.cas-slot-tile em{color:#646970;font-size:11px;font-style:normal;margin-top:4px}.cas-slot-tile.is-booked{background:#fff0f0;border-color:#d63638;color:#7a1011;cursor:not-allowed}.cas-slot-tile.is-free:hover{background:#eef6ff;border-color:#2271b1}.cas-error{color:#d63638;font-weight:700}@media(max-width:900px){.cas-message-center-grid{grid-template-columns:1fr}.cas-slot-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* CAS 1.0.16 message attachments */
+.cas-cleanup-form{align-items:center;background:#fff;border:1px solid #dcdcde;border-radius:10px;display:flex;gap:12px;margin:12px 0 18px;padding:12px}.cas-message-attachment{display:block;margin:8px 0;text-decoration:none}.cas-message-attachment-image img{border:1px solid #dcdcde;border-radius:10px;display:block;height:auto;max-height:220px;max-width:260px;object-fit:cover}.cas-message-attachment-image span,.cas-message-attachment-file{font-size:13px;font-weight:700}.cas-message-attachment-file{background:#fff;border:1px solid #dcdcde;border-radius:8px;color:#2271b1;padding:8px 10px}.cas-message-file-label{display:block;margin-top:10px}.cas-reply-form input[type=file]{background:#fff;border:1px dashed #c3c4c7;border-radius:8px;padding:10px;width:100%}.cas-admin-message-bubble small{display:block;margin-top:6px}@media(max-width:782px){.cas-cleanup-form{align-items:flex-start;flex-direction:column}}
+
+/* CAS 1.0.17 reliable messaging + backend send-to-patient form */
+.cas-new-admin-message-card{border-left:5px solid #2271b1}
+.cas-admin-start-message-form select,
+.cas-admin-start-message-form textarea,
+.cas-admin-start-message-form input[type=file]{max-width:100%;width:100%}
+.cas-admin-start-message-form input[type=file]{background:#fff;border:1px dashed #c3c4c7;border-radius:8px;padding:10px}
+.cas-required{color:#d63638}
+.cas-admin-message-thread{scroll-behavior:smooth}
+
+
+/* CAS 1.0.62 daily reconfirmation call tracking */
+.cas-call-badge{display:inline-block;background:#e9f7ef;border:1px solid #9ed9b6;border-radius:999px;color:#147a3f;font-size:11px;font-weight:700;line-height:1;padding:6px 9px;text-transform:uppercase}
+.cas-call-meta{display:block;color:#646970;font-size:11px;margin-top:5px;white-space:nowrap}
+.cas-mark-called-button{border-color:#2271b1!important;color:#2271b1!important;font-weight:600}
+.cas-row-called{color:#147a3f;font-weight:700}
+
+
+/* CAS 1.0.63: keep all appointment details open in a date-filtered daily call worklist. */
+.cas-daily-worklist-note {
+	align-items: center;
+	background: #f0f6fc;
+	border-left: 4px solid #2271b1;
+	display: flex;
+	gap: 7px;
+	margin: 8px 0 14px;
+	padding: 9px 11px;
+}
+.cas-daily-worklist-note .dashicons { color: #2271b1; }
+@media screen and (max-width: 782px) {
+	.cas-daily-worklist .wp-list-table .toggle-row { display: none !important; }
+	.cas-daily-worklist .wp-list-table tbody tr:not(.inline-edit-row):not(.no-items) td:not(.check-column),
+	.cas-daily-worklist .wp-list-table tbody tr:not(.inline-edit-row):not(.no-items).is-expanded td:not(.hidden) {
+		display: block !important;
+		width: auto !important;
+	}
+	.cas-daily-worklist .wp-list-table tbody tr:not(.inline-edit-row):not(.no-items) td:not(.check-column) {
+		box-sizing: border-box;
+		min-height: 38px;
+		padding-left: 46% !important;
+		text-align: left !important;
+	}
+	.cas-daily-worklist .wp-list-table tbody tr:not(.inline-edit-row):not(.no-items) td:not(.check-column):before {
+		font-weight: 700;
+		left: 10px;
+		text-align: left;
+		width: 40%;
+	}
+	.cas-daily-worklist .wp-list-table tbody tr:not(.inline-edit-row):not(.no-items) td.column-primary {
+		padding-right: 10px !important;
+	}
+	.cas-daily-worklist .wp-list-table .row-actions {
+		margin-top: 7px;
+	}
+}
+
+/* v1.0.76: explicit current-status caption in the appointment worklist. */
+.cas-current-status-help{display:block;margin-top:3px;color:#646970;font-size:11px;line-height:1.2}
+
+/* CAS 2.0.9: clearer tabbed appointment administration screens. */
+.cas-admin-tabs{margin:14px 0 0}
+.cas-tab-panel{margin-top:0;border-top-left-radius:0}
+.cas-appointment-filter-bar{margin-top:18px}
+.cas-booking-patient-tabs{margin-top:24px}
+.cas-booking-patient-tabs .nav-tab-wrapper{margin-bottom:0}
+.cas-booking-patient-tabs .nav-tab{cursor:pointer}
+.cas-patient-tab-panel{background:#fff;border:1px solid #c3c4c7;border-top:0;padding:22px}
+.cas-patient-tab-panel[hidden]{display:none!important}
+.cas-patient-tab-panel .submit{margin-bottom:0;padding-bottom:0}
+.cas-back-to-list{margin-top:16px}
+@media screen and (max-width:782px){
+	.cas-admin-tabs{display:flex;gap:4px;overflow-x:auto}
+	.cas-admin-tabs .nav-tab{flex:0 0 auto;margin-left:0}
+	.cas-patient-tab-panel{padding:16px}
+}
+
+/* Keep deactivated doctors and patients visible, but make their inactive state obvious. */
+.cas-admin-wrap table.widefat tbody tr.cas-inactive-record > td{background:#fff1f2!important;color:#991b1b;border-top-color:#fecaca;border-bottom-color:#fecaca}
+.cas-admin-wrap table.widefat tbody tr.cas-inactive-record:hover > td{background:#ffe4e6!important}
+.cas-admin-wrap .cas-status-inactive{display:inline-block;padding:3px 9px;border-radius:999px;background:#dc2626;color:#fff;font-weight:700}
+.cas-admin-wrap .cas-status-active{display:inline-block;padding:3px 9px;border-radius:999px;background:#dcfce7;color:#166534;font-weight:700}

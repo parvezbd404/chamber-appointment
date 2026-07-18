@@ -1,0 +1,274 @@
+/**
+ * Diabetes Care Module — Autocomplete & Drug Field CSS
+ * File: assets/css/dc-autocomplete.css
+ */
+
+/* ---- Dropdown container ---- */
+.dc-drug-dropdown {
+    position: absolute;
+    z-index: 99999;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+/* ---- Each result row ---- */
+.dc-drug-dropdown li.dc-ac-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0 10px;
+    align-items: baseline;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.4;
+}
+.dc-drug-dropdown li.dc-ac-item:last-child {
+    border-bottom: none;
+}
+.dc-drug-dropdown li.dc-ac-item:hover,
+.dc-drug-dropdown li.dc-ac-item.dc-ac-active {
+    background: #f0f6ff;
+}
+
+/* ---- Column: Brand name ---- */
+.dc-ac-brand {
+    font-weight: 600;
+    color: #1d2327;
+}
+.dc-ac-brand mark {
+    background: #ffe066;
+    color: #1d2327;
+    padding: 0 1px;
+    border-radius: 2px;
+}
+
+/* ---- Column: Generic name ---- */
+.dc-ac-generic {
+    color: #50575e;
+    font-size: 12px;
+}
+.dc-ac-generic mark {
+    background: #fff0b3;
+    color: #50575e;
+    padding: 0 1px;
+    border-radius: 2px;
+}
+
+/* ---- Column: Strength + form ---- */
+.dc-ac-meta {
+    font-size: 11px;
+    color: #8c8f94;
+    white-space: nowrap;
+}
+
+/* ---- States ---- */
+.dc-drug-dropdown li.dc-ac-empty,
+.dc-drug-dropdown li.dc-ac-loading {
+    padding: 10px 14px;
+    color: #8c8f94;
+    font-size: 13px;
+    font-style: italic;
+    cursor: default;
+}
+
+/* ---- Search input styling ---- */
+.dc-drug-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+input.dc-drug-ac {
+    width: 100%;
+    padding: 6px 10px 6px 32px;
+    font-size: 13px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238c8f94' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 8px center;
+    background-size: 15px;
+    box-sizing: border-box;
+}
+input.dc-drug-ac:focus {
+    outline: none;
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* ---- Strength picker ---- */
+.dc-strength-picker {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-top: 6px;
+}
+.dc-str-btn {
+    margin: 2px 4px 2px 0 !important;
+    font-size: 12px !important;
+}
+
+/* ---- Prescription row layout ---- */
+.dc-rx-row {
+    display: grid;
+    gap: 8px;
+    align-items: end;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+}
+
+/* Insulin row: drug | strength | form | dose fields */
+.dc-rx-row.dc-insulin-row {
+    grid-template-columns: 2fr 100px 100px 90px 90px 90px 90px;
+}
+
+/* GLP row: drug | strength | form | frequency */
+.dc-rx-row.dc-glp-row {
+    grid-template-columns: 2fr 100px 100px 140px;
+}
+
+/* OAD / Other row: drug | strength | form | freq | duration | unit | remove */
+.dc-rx-row.dc-oad-row {
+    grid-template-columns: 2fr 100px 100px 120px 90px 90px 30px;
+}
+
+.dc-rx-row label {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.dc-rx-row input[type="number"],
+.dc-rx-row input[type="text"],
+.dc-rx-row select {
+    width: 100%;
+    font-size: 13px;
+    padding: 5px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.dc-rx-row input[disabled] {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Remove row button */
+.dc-remove-row {
+    background: none;
+    border: none;
+    color: #cc1818;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    align-self: center;
+}
+.dc-remove-row:hover { color: #8b0000; }
+
+/* Add row button */
+.dc-add-row-btn {
+    margin-top: 4px;
+    font-size: 12px !important;
+}
+
+/* ---- Monitoring wizard steps ---- */
+.dc-wizard-step {
+    display: none;
+}
+.dc-wizard-step.active {
+    display: block;
+}
+.dc-step-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.dc-step-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #ddd;
+    color: #666;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.dc-step-dot.done  { background: #4caf50; color: #fff; }
+.dc-step-dot.active{ background: #2271b1; color: #fff; }
+
+.dc-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.dc-checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+.dc-checkbox-grid label:hover {
+    border-color: #2271b1;
+    background: #f0f6ff;
+}
+.dc-checkbox-grid input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.dc-interval-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+}
+.dc-interval-row label {
+    font-size: 13px;
+    white-space: nowrap;
+}
+.dc-interval-row input[type="number"] {
+    width: 70px;
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.dc-interval-row select {
+    padding: 6px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.dc-wizard-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #e0e0e0;
+}
